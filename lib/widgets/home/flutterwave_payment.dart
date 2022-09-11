@@ -411,12 +411,12 @@ class _FlutterwaveUIState extends State<FlutterwaveUI> {
         textAlign: TextAlign.center,
       ),
     );
-    this._scaffoldKey.currentState!.showSnackBar(snackBar);
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
   void _handleBackPress(dynamic result) {
     if (result == null || result is ChargeResponse){
-      final ChargeResponse? chargeResponse = result as ChargeResponse;
+      final ChargeResponse? chargeResponse = result as ChargeResponse?;
       String message;
       if (chargeResponse != null) {
         message = chargeResponse.message!;

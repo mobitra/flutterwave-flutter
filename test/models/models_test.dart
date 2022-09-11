@@ -71,7 +71,6 @@ main() {
     test("toJson() should work correctly", () {
       final json = chargeCardRequest.toJson();
 
-      expect(true, json != null);
       expect("419", json["cvv"]);
       expect("100", json["amount"]);
       expect("email.com", json["email"]);
